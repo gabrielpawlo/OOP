@@ -12,7 +12,7 @@
     public Genero Genero { get; set; }
     public bool Disponivel {get; set; }
     public string DescricaoResumida => 
-        $"A musica {Nome} pertence a {Artista.NomeBanda}";
+        $"Nome da musica: {Nome}\nArtista: {Artista.NomeBanda}\nGenero: {Genero.Nome}";
  
 
     public void FichaMusica()
@@ -20,6 +20,7 @@
         Console.WriteLine($"Nome da musica: {Nome}");
         Console.WriteLine($"Artista: {Artista.NomeBanda}");
         Console.WriteLine($"Duração: {Duracao} segundos");
+        Console.WriteLine($"Gênero: {Genero.Nome}");
         Console.WriteLine($"Disponível: {(Disponivel ? "Sim" : "Não")}\n");
     }
 }

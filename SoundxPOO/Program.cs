@@ -4,18 +4,22 @@ Banda sarcofago = new Banda("Sarcofago");
 Musica musica1 = new Musica(beatle, "Let it be");
 musica1.Duracao = 240;
 musica1.Disponivel = true;
+musica1.Genero = new Genero("Rock");
 
 Musica musica2 = new Musica(beatle, "Hey Jude");
 musica2.Duracao = 300;
 musica2.Disponivel = true;
+musica2.Genero = new Genero("Rock");
 
 Musica musica3 = new Musica(sarcofago, "Nightmare");
 musica3.Duracao = 180;
 musica3.Disponivel = false;
+musica3.Genero = new Genero("Metal");
 
 Musica musica4 = new Musica(sarcofago, "Crucifixion");
 musica4.Duracao = 200;
 musica4.Disponivel = true;
+musica4.Genero = new Genero("Metal");
 
 Playlist playlist1 = new Playlist("Playlist Beatles", 1);
 playlist1.AdicionarMusica(musica1);
@@ -31,5 +35,5 @@ foreach (var playlist in playlists.OrderBy(p => p.Ordem))
 {
     Console.WriteLine($"Playlist {playlist.Ordem}:");
     playlist.ExibirMusicas();
-    Console.WriteLine();
+    Console.WriteLine("\n");
 }
